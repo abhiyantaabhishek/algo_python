@@ -1,2 +1,2 @@
 # algo_python
-algl and ds using python
+algorithm  and data structure  using python
