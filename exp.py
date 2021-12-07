@@ -30,3 +30,20 @@ def preorder_traversal(root: BinaryTree):
 
 
 preorder_traversal(root)
+#%%
+def fun(arr, a):
+    arr[0] = 10
+    a = 6
+
+
+def fun2():
+    arr = [1, 2, 3]
+    a = 0
+    fun(arr, a)
+    print(arr, a)
+
+
+fun2()
+
+
+#%%
