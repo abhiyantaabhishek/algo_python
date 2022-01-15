@@ -38,11 +38,16 @@ class Graph:
         plt.show()
 
     def dfs(self, v, visited_node=set()):
-        print(v)
-        visited_node.add(v)
-        for neighbours in self.graph[v]:
-            if neighbours not in visited_node:
-                self.dfs(neighbours, visited_node)
+        stack = deque()
+        visited = set()
+        stack.append(v)
+        while len(stack) != 0:
+            v = stack.pop()
+            print(v)
+            visited.add(v)
+            for neighbours in self.graph[v]:
+                if neighbours not in visited:
+                    stack.append(neighbours)
 
     def bfs(self, v):
         queue = deque()
@@ -66,6 +71,6 @@ graph.add_edge("C", "D")
 graph.add_edge("D", "A")
 graph.add_edge("B", "A")
 # %%
-graph.bfs("B")
+graph.dfs1("B")
 # %%
 graph.visualise_graph()
